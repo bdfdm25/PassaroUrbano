@@ -18,3 +18,8 @@ input.ng-valid.ng-touched{
 select.ng-valid.ng-touched{
     border: 1px solid green;
 }
+
+.carrinhoVazio{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

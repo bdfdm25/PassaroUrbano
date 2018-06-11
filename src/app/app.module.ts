@@ -6,6 +6,11 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms'
 import { ROUTES } from './app.routes'
 
+import { CarrinhoService } from './carrinho.service'
+
+//pipe
+import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
+
 import { AppComponent } from './app.component';
 import { TopoComponent } from './topo/topo.component';
 import { HomeComponent } from './home/home.component';
@@ -15,8 +20,6 @@ import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
-
-import { DescricaoReduzida } from './util/descricao-reduzida.pipe';
 import { OrdemCompraComponent } from './ordem-compra/ordem-compra.component';
 import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra-sucesso.component'
 
@@ -42,7 +45,7 @@ import { OrdemCompraSucessoComponent } from './ordem-compra-sucesso/ordem-compra
     ReactiveFormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [ CarrinhoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
